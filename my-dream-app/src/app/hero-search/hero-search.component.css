@@ -1,0 +1,31 @@
+/* HeroSearch private styles */
+.search-result li {
+  width:300px;
+}
+
+.search-result li:hover {
+  background-color: rgb(188, 156, 153);
+}
+
+.search-result li a {
+  color: #888;
+  display: block;
+  text-decoration: none;
+}
+
+.search-result li a:hover {
+  color: white;
+}
+.search-result li a:active {
+  color: white;
+}
+#search-box {
+  width: 300px;
+  height: 30px;
+}
+
+
+ul.search-result {
+  margin-top: 0;
+  padding-left: 0;
+}

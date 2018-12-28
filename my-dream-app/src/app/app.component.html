@@ -1,0 +1,40 @@
+<nz-layout class="layout">
+  <nz-header style="background: rgb(245, 217, 217)">
+    <div class="logo"></div>
+  </nz-header>
+  <nz-content style="padding:0 50px;">
+    <nz-breadcrumb style="margin:16px 0;">
+    </nz-breadcrumb>
+    <nz-layout style="padding:24px 0; background: rgb(236, 234, 234)">
+      <nz-sider [nzWidth]="200" style="background:rgb(188, 156, 153)">
+          <div nz-row style="margin-top: 20%">
+              <div nz-col nzSpan="12">
+                  <button nz-button nzType="dashed" nzGhost routerLink="/dashboard">用户管理</button>
+              </div>
+          </div>
+          <div nz-row>
+              <div nz-col nzSpan="12">
+                  <button nz-button nzType="dashed" nzGhost>景点管理</button>
+              </div>
+          </div>
+          <div nz-row>
+              <div nz-col nzSpan="12">
+                  <button nz-button nzType="dashed" nzGhost>评论管理</button>
+              </div>
+          </div>
+          <div nz-row>
+              <div nz-col nzSpan="12">
+                  <button nz-button nzType="dashed" nzGhost>攻略管理</button>
+              </div>
+          </div>
+      </nz-sider>
+      <nz-content style="padding: 0 24px; min-height: 700px;">
+            <router-outlet></router-outlet>
+            <app-messages></app-messages>
+      </nz-content>
+    </nz-layout>
+    <nz-footer style="text-align: center;">Ant Design ©2017 Implement By Angular</nz-footer>
+  </nz-content>
+
+</nz-layout>
+

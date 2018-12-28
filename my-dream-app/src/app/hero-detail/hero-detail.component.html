@@ -1,0 +1,24 @@
+<div nz-row>
+    <div nz-col nzSpan="6">
+
+    </div>
+    <div nz-col nzSpan="18">
+        <div *ngIf="hero">
+            <h2>{{hero.name | uppercase}} 用户详细信息</h2>
+            <div><span>id: </span>{{hero.id}}</div>
+            <div nz-row>
+                <label>name:
+                    <input [(ngModel)]="hero.name" placeholder="name"/>
+                </label>
+            </div>
+            <div nz-row>
+                <label>password:
+                    <input [(ngModel)]="hero.password" placeholder="password"/>
+                </label>
+            </div>
+            <button (click)="goBack()">go back</button>
+            <button (click)="save()">save</button>
+          </div>
+    </div>
+</div>
+

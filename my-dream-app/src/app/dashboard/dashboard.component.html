@@ -1,0 +1,33 @@
+<div nz-row>
+    <div nz-col nzSpan="6"></div>
+    <div nz-col nzSpan="6"></div>
+    <div nz-col nzSpan="6">
+        <button nz-button nzType="default" routerLink="/heroes" nzGhost style="color:rgb(151, 109, 105)">添加用户</button>
+    </div>
+    <div nz-col nzSpan="6">
+
+    </div>
+  </div>
+  <div nz-row nzGutter="16">
+      <div nz-col class="gutter-row" nzSpan="6" >
+      </div>
+      <div nz-col class="gutter-row" nzSpan="10" >
+          <div class="gutter-box">
+              <app-hero-search></app-hero-search>
+          </div>
+        </div>
+      <div nz-col class="gutter-row" nzSpan="8">
+        <div class="gutter-box">
+            <div class="grid grid-pad">
+                <a *ngFor="let hero of heroes" class="col-1-4"
+                    routerLink="/detail/{{hero.id}}">
+                  <div class="module hero">
+                    <h4>{{hero.name}}</h4>
+                    <h5>{{hero.password}}</h5>
+                  </div>
+                </a>
+            </div>
+        </div>
+      </div>
+  </div>
+
