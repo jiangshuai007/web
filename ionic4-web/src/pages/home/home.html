@@ -1,0 +1,66 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        发现
+      </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-searchbar type="tel"></ion-searchbar>
+    <div class="imglist">
+            <ion-slides pager>
+                    <ion-slide>
+                            <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3463817298,1914259616&fm=26&gp=0.jpg"/>
+                    </ion-slide>
+                    <ion-slide>
+                            <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2075937383,1276884163&fm=26&gp=0.jpg"/>
+                    </ion-slide>
+                    <ion-slide>
+                            <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4261761961,1919990620&fm=26&gp=0.jpg"/>
+                    </ion-slide>
+            </ion-slides>
+    </div>
+    <ion-row >
+        <ion-col style="margin-left: 5%">
+                <button ion-button icon-left (click)="toScenic()" clear >
+                        <ion-icon ios="ios-leaf-outline"></ion-icon>
+                        景点
+                </button>                 
+        </ion-col>
+        <ion-col>
+                <button ion-button icon-left (click)="toComment()" clear >
+                        <ion-icon ios="ios-paper-outline"></ion-icon>
+                        评论
+                </button> 
+        </ion-col>
+        <ion-col>
+                <button ion-button icon-left (click)="toStrategy()" clear >
+                        <ion-icon ios="ios-map-outline"></ion-icon>
+                        攻略
+                </button>  
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col style="margin-left: 5%">
+                <button ion-button icon-left (click)="toTravel()" clear >
+                        <ion-icon ios="ios-paper-plane-outline"></ion-icon>
+                        游记
+                </button> 
+        </ion-col>
+    </ion-row>
+    <li *ngFor="let hero of heroes">
+        <ion-card>
+                <img src="{{hero.imgurl}}"/>
+                <ion-card-content>
+                    <ion-card-title>
+                            {{hero.name}}
+                    </ion-card-title>
+                    <p>
+                    {{hero.news}}
+                    </p>
+                </ion-card-content>
+        </ion-card>
+    </li>
+   
+    
+</ion-content>

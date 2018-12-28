@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>form-demo</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="onSubmit()" #ngForm="ngForm" class="ngForm">
+    <ion-list>
+
+
+      <ion-item>
+        <ion-label>景区名称</ion-label>
+        <ion-input type="text" name="name" placeholder="中文" [(ngModel)]="model.name" #name="ngModel"
+                   pattern="[\u4e00-\u9fa5]{2,10}"></ion-input>
+      </ion-item>
+      <div *ngIf="name.invalid && name.dirty" class="form-invalid-tip">
+        <div *ngIf="name.errors.pattern">至少2个中文字符</div>
+      </div>
+
+      <ion-item>
+        <ion-label>日期</ion-label>
+        <ion-datetime name="birthday" placeholder="请选择日期" [max]="today" [(ngModel)]="model.birthday"
+                      displayFormat="YYYY-MM-DD" cancelText="取消" doneText="确定"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>是否匿名</ion-label>
+        <ion-input placeholder="身份状态" [value]="model.isMarried?'匿名':(model.isMarried===false?'未匿名':'')"></ion-input>
+        <ion-toggle name="isMarried" [(ngModel)]="model.isMarried"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>满意度</ion-label>
+        <ion-select name="education" placeholder="请选择满意度" [(ngModel)]="model.education" cancelText="取消" okText="确定">
+          <ion-option value="1">极差</ion-option>
+          <ion-option value="2">较差</ion-option>
+          <ion-option value="3">一般</ion-option>
+          <ion-option value="4">较好</ion-option>
+          <ion-option value="5">极好</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>评论内容</ion-label>
+        <div item-content class="form-item-content">
+          <div class="form-textarea" contenteditable="true" [ngClass]="{'form-textarea-placeholder': !model.introduction}" name="introduction" [(ngModel)]="model.introduction"></div>
+        </div>
+      </ion-item>
+
+      
+
+    </ion-list>
+
+    <div padding-horizontal>
+      <button type="reset" ion-button outline (click)="reset();ngForm.reset()">清空</button>
+      <button type="submit" ion-button [disabled]="!ngForm.form.valid">提交</button>
+      
+    </div>
+    <div padding>
+    </div>
+  </form>
+
+</ion-content>

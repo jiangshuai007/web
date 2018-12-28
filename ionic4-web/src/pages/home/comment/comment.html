@@ -1,0 +1,45 @@
+<ion-header>
+
+        <ion-navbar>
+          <ion-title>评论</ion-title>
+        </ion-navbar>
+      
+      </ion-header>
+<ion-content>
+    <ion-searchbar type="tel"></ion-searchbar>
+    <button ion-button clear large style="margin-left: 80%" (click)="formDemo()">Add</button> 
+
+  <li *ngFor="let hero of heroes">
+      <ion-row>
+        <ion-col style="width: 20%">
+            <img src="http://192.168.43.10:8080{{hero.imgUrl}}" style="width: 60%"/>
+        </ion-col>
+        <ion-col >
+            <p style="color: cornflowerblue">
+            景点：
+            </p>
+            <p style="color: cornflowerblue">
+             作者：
+            </p>
+        </ion-col>
+        <ion-col style="margin-left: -30%">
+            <p style="color: cornflowerblue">
+                {{hero.scenic}}
+                </p>
+                <p style="color: cornflowerblue">
+                 {{hero.writer}}
+                </p>
+                <p style="color: cornflowerblue">
+                 {{hero.time}} 
+                </p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <p style="margin-left: 10%;color: cadetblue">
+             {{hero.content}}
+         </p>
+      </ion-row>
+  </li>
+
+ 
+</ion-content>

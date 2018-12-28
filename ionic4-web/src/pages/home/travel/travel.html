@@ -1,0 +1,40 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>游记</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+<ion-content>
+<ion-searchbar type="tel"></ion-searchbar>
+<li *ngFor="let hero of heroes">
+    <ion-card>
+       <ion-slides pager>
+           <ion-slide>
+                   <img src="http://192.168.43.10:8080{{hero.imgUrl1}}"/>
+                   <ion-card-content>
+                       <p>
+                       {{hero.content1}}
+                       </p>
+                   </ion-card-content>
+           </ion-slide>
+           <ion-slide>
+                   <img src="http://192.168.43.10:8080{{hero.imgUrl3}}"/>
+                   <ion-card-content>
+                       <p>
+                       {{hero.content2}}
+                       </p>
+                   </ion-card-content>
+           </ion-slide>
+           <ion-slide>
+                   <img src="http://192.168.43.10:8080{{hero.imgUrl2}}"/>
+                   <ion-card-content>
+                       <p>
+                       {{hero.content3}}
+                       </p>
+                   </ion-card-content>
+           </ion-slide>
+       </ion-slides>
+    </ion-card>
+  </li>
+</ion-content>

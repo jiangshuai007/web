@@ -1,0 +1,58 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>景点</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+<ion-content>
+  <div class="imglist">
+    <ion-slides pager>
+            <ion-slide>
+                    <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3463817298,1914259616&fm=26&gp=0.jpg"/>
+            </ion-slide>
+            <ion-slide>
+                    <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2075937383,1276884163&fm=26&gp=0.jpg"/>
+            </ion-slide>
+            <ion-slide>
+                    <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4261761961,1919990620&fm=26&gp=0.jpg"/>
+            </ion-slide>
+    </ion-slides>
+  </div>
+  <li *ngFor="let hero of heroes">
+      <ion-row>
+          <ion-col size="6">
+              <ion-card>
+                  <img src="http://192.168.43.10:8080{{hero.imgUrl1}}"/>
+                  <ion-card-content>
+                      <h2>{{hero.scenic1}}</h2>
+                      <h2>¥{{hero.ticket1}}</h2>
+                      <p> {{hero.location1}}</p>
+                  </ion-card-content>
+              </ion-card>
+          </ion-col>
+          <ion-col>
+              <ion-card>
+                  <img src="http://192.168.43.10:8080{{hero.imgUrl2}}"/>
+                  <ion-card-content>
+                      <h2>{{hero.scenic2}}</h2>
+                      <h2>¥{{hero.ticket2}}</h2>
+                      <p> {{hero.location2}}</p>
+                  </ion-card-content>
+              </ion-card>
+          </ion-col>
+        </ion-row>
+  </li>
+
+  <ion-row>
+    <ion-col>
+
+    </ion-col>
+    <ion-col>
+
+    </ion-col>
+  </ion-row>
+
+
+
+</ion-content>

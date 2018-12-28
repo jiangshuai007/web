@@ -1,0 +1,21 @@
+<ion-header>
+        <ion-toolbar>
+          <ion-title>
+            news
+          </ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-searchbar type="tel"></ion-searchbar>
+        <li *ngFor="let hero of heroes">
+              <ion-list>
+                  <ion-item>
+                    <ion-label>
+                      <h2>{{hero.name}}</h2>
+                
+                      <p>{{hero.news}}</p>
+                    </ion-label>
+                  </ion-item>
+                </ion-list>  
+        </li>
+    </ion-content>
